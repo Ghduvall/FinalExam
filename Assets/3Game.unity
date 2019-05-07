@@ -503,6 +503,7 @@ GameObject:
   - component: {fileID: 677742706}
   - component: {fileID: 677742708}
   - component: {fileID: 677742707}
+  - component: {fileID: 677742709}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -571,6 +572,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677742705}
   m_CullTransparentMesh: 0
+--- !u!114 &677742709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677742705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae6247bc9c5d9d4c9c66e8172bb30d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewScore: {fileID: 677742707}
 --- !u!1 &750965340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,8 +1172,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1249446903}
+        m_MethodName: sceneEnd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1298,6 +1312,8 @@ GameObject:
   - component: {fileID: 1249446902}
   - component: {fileID: 1249446901}
   - component: {fileID: 1249446900}
+  - component: {fileID: 1249446903}
+  - component: {fileID: 1249446904}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1369,6 +1385,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1249446903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249446899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c37d69f0f313684e816614fe8863748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introContinueBtn: {fileID: 0}
+  optionsBtn: {fileID: 0}
+  saveOptionsBtn: {fileID: 0}
+  startBtn: {fileID: 0}
+  restartBtn: {fileID: 0}
+  quitBtn: {fileID: 0}
+  saveName: {fileID: 0}
+--- !u!114 &1249446904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249446899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a7c67000f3cdd43a9d08f30fd3649f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeScene: {fileID: 0}
+  drop: {fileID: 0}
+  scoreKeeper: {fileID: 677742709}
+  sizeText: {fileID: 1017348521}
+  gameTimer: {fileID: 1514416036}
 --- !u!1 &1372951766
 GameObject:
   m_ObjectHideFlags: 0

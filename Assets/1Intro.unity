@@ -625,7 +625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -645,7 +645,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Toggle
+  m_Text: 60 second play (on)
 --- !u!222 &454788633
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1148,7 +1148,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option A
+  m_Text: Select Size
 --- !u!222 &1244865719
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1507,7 +1507,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1462633083}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2041781132}
+        m_MethodName: scenePreScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1462633083
@@ -1559,6 +1570,7 @@ GameObject:
   - component: {fileID: 1658537891}
   - component: {fileID: 1658537890}
   - component: {fileID: 1658537889}
+  - component: {fileID: 1658537892}
   m_Layer: 5
   m_Name: Dropdown
   m_TagString: Untagged
@@ -1633,11 +1645,11 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Option A
+    - m_Text: Select Size
       m_Image: {fileID: 0}
-    - m_Text: Option B
+    - m_Text: Small
       m_Image: {fileID: 0}
-    - m_Text: Option C
+    - m_Text: Large
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1681,6 +1693,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658537887}
   m_CullTransparentMesh: 0
+--- !u!114 &1658537892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658537887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138a0394995d36d4ba9464f9d9e994db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1660949185
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,7 +2044,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1980503703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,6 +2207,8 @@ GameObject:
   - component: {fileID: 2041781130}
   - component: {fileID: 2041781129}
   - component: {fileID: 2041781128}
+  - component: {fileID: 2041781131}
+  - component: {fileID: 2041781132}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2254,6 +2280,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2041781131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041781127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c60116770d27224b99f3ffd94ca917d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  funMode: {fileID: 1892654196}
+--- !u!114 &2041781132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041781127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c37d69f0f313684e816614fe8863748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introContinueBtn: {fileID: 0}
+  optionsBtn: {fileID: 0}
+  saveOptionsBtn: {fileID: 0}
+  startBtn: {fileID: 0}
+  restartBtn: {fileID: 0}
+  quitBtn: {fileID: 0}
+  saveName: {fileID: 0}
 --- !u!1 &2045693231
 GameObject:
   m_ObjectHideFlags: 0

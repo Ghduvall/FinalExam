@@ -4,8 +4,10 @@ using System;
 
 public class ScoreKeeper : MonoBehaviour
 {
-    static public int newScore = 0;
+    public static int newScore = 0;
     public Text NewScore;
+
+
 
     public void IncreaseScore() // clicking on + button increases score
     {
