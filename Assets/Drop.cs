@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Drop : MonoBehaviour
 {
     Dropdown dropdown;
+    Dropdown dropdown1;
     public string sizeValue = "test1";
 
     // Start is called before the first frame update
